@@ -66,7 +66,7 @@ function startAnimation() {
 
     ;
 
-    master.timeScale(1);
+    master.timeScale(2);
     GSDevTools.create()
 
     return master;
