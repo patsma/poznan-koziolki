@@ -57,7 +57,7 @@ function startAnimation() {
 
     ;
 
-    const master = gsap.timeline({repeat: 10, yoyo: true});
+    const master = gsap.timeline({repeat: 5, yoyo: true});
 
     master
         // .add(tlBuild)
@@ -67,7 +67,16 @@ function startAnimation() {
     ;
 
     master.timeScale(2);
-    GSDevTools.create()
+
+
+    ScrollTrigger.create({
+        trigger: wrapper,
+        start: "top center",
+        toggleActions: "play pause resume reverse",
+        markers: true,
+        animation: master
+
+    });
 
     return master;
 }
